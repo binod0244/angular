@@ -6,9 +6,9 @@ on:
       target_service:
         description: 'test-app'
         required: true
-      target_version:
-        description: 'v1.0.0'
-        required: true
+      # target_version:
+      #   description: 'v1.0.0'
+      #   required: true
 
 jobs:
   trigger:
@@ -21,8 +21,8 @@ jobs:
           repo_owner="binod0244" 
           repo_name="javaSample"  
           event_type="trigger-workflow" 
-          service=${{ github.event.inputs.target_service }}
-          version="${{ github.event.inputs.target_version }}
+          service="test-app"
+          version="v1.0.0"
   
           curl -L \
             -X POST \
