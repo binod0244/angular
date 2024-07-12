@@ -21,8 +21,8 @@ jobs:
           repo_owner="binod0244" 
           repo_name="javaSample"  
           event_type="trigger-workflow" 
-          service=${{ github.event.inputs.target_service }}"
-          version="${{ github.event.inputs.target_version }}"
+          service=${{ github.event.inputs.target_service }}
+          version="${{ github.event.inputs.target_version }}
   
           curl -L \
             -X POST \
